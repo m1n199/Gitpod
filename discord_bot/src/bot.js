@@ -1,5 +1,5 @@
+require("dotenv").config();
 const { Client, GatewayIntentBits } = require('discord.js');
-
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 client.on('ready', () => {
@@ -7,8 +7,7 @@ client.on('ready', () => {
 });
 
 client.on('messageCreate', (message) => {
-    if (message.content == 'ping') 
-        console.log("KO");
+        console.log(message.content);
 });
 
 client.login(process.env.TOKEN);
