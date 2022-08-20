@@ -19,6 +19,7 @@
   "homepage": "https://github.com/m1n199/Gitpod#readme",
   "dependencies": {
     "discord.js": "^14.2.0",
-    "dotenv": "^16.0.1"
+    "dotenv": "^16.0.1",
+    "fs": "^0.0.1-security"
   }
 }
