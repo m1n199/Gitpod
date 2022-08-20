@@ -1,13 +1,31 @@
 require("dotenv").config();
-const { Client, GatewayIntentBits } = require('discord.js');
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+// const { Client, GatewayIntentBits } = require('discord.js');
+const { Client, Collection, GatewayIntentBits } = require('discord.js');
+const client = new Client({ intents: GatewayIntentBits.Guilds });
 
-client.on('ready', () => {
-    console.log(`${client.user.tag}  logged in`);
-});
+const fs = require("fs");
 
-client.on('messageCreate', (message) => {
-        console.log(message.content);
-});
+client.commands = new Collection();
+client.commandArray = [];
+
+const functionFolders = fs.readdirSync(`./scr/functions`);
+for(const folder of functionFolders){
+    const functionFiles = fs
+            .readdirSync(`./src/functions/${folder}`)
+            .filter((file)=>file.endsWith(".js"));
+
+    for(const file of functionFiles)
+        require(`./src/functions/${folder}/${file}`)(client);
+}
+
+
+
+
+
+
+// client.on('ready', () => {
+//     console.log(`${client.user.tag}  logged in`);
+// });
+
 
 client.login(process.env.TOKEN);
