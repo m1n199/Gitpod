@@ -1,0 +1,51 @@
+GatewayIntentBits.Guilds,
+GatewayIntentBits.GuildMessages,
+GatewayIntentBits.MessageContent,
+GatewayIntentBits.DirectMessages
+
+<ref *1> Message {
+  channelId: '967808235048423490',
+  guildId: '967808235048423484',
+  id: '1010964779898249257',
+  createdTimestamp: 1661103186345,
+  type: 0,
+  system: false,
+  content: 'ping',
+  author: User {
+    id: '967802081673105458',
+    bot: false,
+    system: false,
+    flags: UserFlagsBitField { bitfield: 0 },
+    username: 'Hachi_Metsu',
+    discriminator: '7929',
+    avatar: '4d68df2412c1f52cee971892d252c399',
+    banner: undefined,
+    accentColor: undefined
+  },
+  pinned: false,
+  tts: false,
+  nonce: '1010964779348525056',
+  embeds: [],
+  components: [],
+  attachments: Collection(0) [Map] {},
+  stickers: Collection(0) [Map] {},
+  editedTimestamp: null,
+  reactions: ReactionManager { message: [Circular *1] },
+  mentions: MessageMentions {
+    everyone: false,
+    users: Collection(0) [Map] {},
+    roles: Collection(0) [Map] {},
+    _members: null,
+    _channels: null,
+    _parsedUsers: null,
+    crosspostedChannels: Collection(0) [Map] {},
+    repliedUser: null
+  },
+  webhookId: null,
+  groupActivityApplication: null,
+  applicationId: null,
+  activity: null,
+  flags: MessageFlagsBitField { bitfield: 0 },
+  reference: null,
+  interaction: null
+}
